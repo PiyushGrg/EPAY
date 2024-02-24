@@ -19,7 +19,7 @@ import Users from './pages/Users';
 function App() {
 
   const {loading} = useSelector((state)=>state.loaders);
-  // const {user} = useSelector((state)=>state.users);
+  const {user} = useSelector((state)=>state.users);
 
   return (
     <div>
@@ -31,7 +31,7 @@ function App() {
           <Route path="/" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
           <Route path="/transactions" element={<ProtectedRoute><Transactions/></ProtectedRoute>}/>
           <Route path="/requests" element={<ProtectedRoute><Requests/></ProtectedRoute>}/>
-          <Route path="/users" element={<ProtectedRoute><Users/></ProtectedRoute>}/>
+          {user?.isAdmin===true && <Route path="/users" element={<ProtectedRoute><Users/></ProtectedRoute>}/>}
         </Routes>
       </BrowserRouter>
     </div>
