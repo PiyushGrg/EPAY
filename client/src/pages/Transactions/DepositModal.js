@@ -61,7 +61,7 @@ function DepositModal({
                             token={onToken}
                             currency="USD"
                             amount={form.getFieldValue("amount") *100 }
-                            stripeKey="pk_test_51OY3dTSJh0wyJGbP3mJ63i4M3I6pcPOCMVfhwPiN7aBtctzzbJUMPjMaPwtnTVLoqSpdRoVFe3DygfGXXoBdy4db00GsUrSf1W"
+                            stripeKey="pk_test_51PRCrvHjOY2wGRHEDJ7sXtAnn39kZ9xc2V6jRU6bloSjOOawwDypeEQoE2sBDYaaNpoXJeWlGlKwo7Da0jA53J1P00XEKoJ42J"
                         >
                             <button className="primary-contained-btn">Deposit</button>
                         </StripeCheckout>
